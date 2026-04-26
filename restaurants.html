@@ -1,0 +1,181 @@
+<html>
+<head>
+    <title>Restaurants in Kigali</title>
+    <link rel="stylesheet" href="css/restaurants.css">
+</head>
+<body>
+
+    <header>
+        <h1>Discover Kigali</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="activities.html">Activities</a> | 
+            <a href="restaurants.html">Restaurants</a> | 
+            <a href="culture.html">Culture</a> | 
+            <a href="nightlife.html">Nightlife</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h2>Places to Eat in Kigali.</h2>
+    </section>
+
+    <section class="content">
+        <h3>Types of Restaurants (Unordered List)</h3>
+        <ul>
+            <li>
+                <h4>Traditional Rwandan Restaurants</h4>
+                <p>Try local dishes like brochettes (grilled meat), ugali, and isombe.</p>
+            </li>
+            <li>
+                <h4>International Restaurants</h4>
+                <p>Italian, Chinese, Indian, and French food available in Kigali.</p>
+            </li>
+            <li>
+                <h4>Cafes and Coffee Shops</h4>
+                <p>Rwanda is famous for coffee. Visit cafes to try fresh Rwandan coffee.</p>
+            </li>
+            <li>
+                <h4>Fast Food</h4>
+                <p>Pizza, burgers, and chicken restaurants are popular.</p>
+            </li>
+            <li>
+                <h4>Street Food</h4>
+                <p>Cheap and tasty options like grilled corn and samosas.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="restaurant-cards">
+        <h3>Popular Restaurants</h3>
+        
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Heaven Restaurant">
+            <h4>Heaven Restaurant</h4>
+            <p>Type: International & Rwandan</p>
+            <p>Rating: 4.8/5</p>
+            <p>Location: Kimihurura</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="The Meat House">
+            <h4>The Meat House</h4>
+            <p>Type: Steakhouse</p>
+            <p>Rating: 4.7/5</p>
+            <p>Location: Kacyiru</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400" alt="Brother's Pizza">
+            <h4>Brother's Pizza</h4>
+            <p>Type: Italian & Pizza</p>
+            <p>Rating: 4.5/5</p>
+            <p>Location: Kimironko</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400" alt="Question Coffee">
+            <h4>Question Coffee Cafe</h4>
+            <p>Type: Cafe</p>
+            <p>Rating: 4.9/5</p>
+            <p>Location: Kacyiru</p>
+        </div>
+    </section>
+
+    <section class="table-section">
+        <h3>Restaurant Comparison Table</h3>
+        <table>
+            <tr>
+                <th>Restaurant</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td>Heaven Restaurant</td>
+                <td>International</td>
+                <td>$$-$$$</td>
+                <td>Kimihurura</td>
+                <td>4.8/5</td>
+            </tr>
+            <tr>
+                <td>The Meat House</td>
+                <td>Steakhouse</td>
+                <td>$$$</td>
+                <td>Kacyiru</td>
+                <td>4.7/5</td>
+            </tr>
+            <tr>
+                <td>Brother's Pizza</td>
+                <td>Italian</td>
+                <td>$$</td>
+                <td>Kimironko</td>
+                <td>4.5/5</td>
+            </tr>
+            <tr>
+                <td>Question Coffee</td>
+                <td>Cafe</td>
+                <td>$-$$</td>
+                <td>Kacyiru</td>
+                <td>4.9/5</td>
+            </tr>
+            <tr>
+                <td>Chez Lando</td>
+                <td>Rwandan</td>
+                <td>$</td>
+                <td>Remera</td>
+                <td>4.3/5</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="audio-section">
+        <h3>Listen to Rwandan Music</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </section>
+
+    <section class="gallery">
+        <h3>Restaurant Photos</h3>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" alt="Fine Dining">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" alt="Rwandan Food">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400" alt="Coffee">
+    </section>
+
+    <section class="form-section">
+        <h3>Make a Reservation</h3>
+        <form>
+            <label>Your Name:</label><br>
+            <input type="text" name="name"><br><br>
+            
+            <label>Email:</label><br>
+            <input type="email" name="email"><br><br>
+            
+            <label>Restaurant:</label><br>
+            <select name="restaurant">
+                <option>Heaven Restaurant</option>
+                <option>The Meat House</option>
+                <option>Brother's Pizza</option>
+                <option>Question Coffee</option>
+            </select><br><br>
+            
+            <label>Date:</label><br>
+            <input type="date" name="date"><br><br>
+            
+            <label>Number of People:</label><br>
+            <input type="number" name="guests" min="1" max="20"><br><br>
+            
+            <input type="submit" value="Make Reservation">
+        </form>
+    </section>
+
+    <footer>
+        <p><a href="index.html">Back to Home</a></p>
+        <p>Created for IGIRE Training Assignment 2026</p>
+    </footer>
+
+</body>
+</html>
