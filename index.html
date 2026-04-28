@@ -1,19 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Kigali - Home</title>
+    <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
     <header>
-        <h1>Discover Kigali</h1>
-        <nav>
-            <a href="index.html">Home</a> | 
-            <a href="activities.html">Activities</a> | 
-            <a href="restaurants.html">Restaurants</a> | 
-            <a href="culture.html">Culture</a> | 
-            <a href="nightlife.html">Nightlife</a>
-        </nav>
+        <div class="header-inner">
+            <h1>🌍 Discover Kigali</h1>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="this.classList.toggle('open'); document.querySelector('nav').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="culture.html">Culture</a>
+                <a href="nightlife.html">Nightlife</a>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
@@ -30,33 +39,42 @@
 
     <section class="places">
         <h2>Explore Kigali</h2>
-        
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=400" alt="Kigali City">
-            <h3>Things to Do</h3>
-            <p>Discover amazing activities and attractions in Kigali.</p>
-            <a href="activities.html">View Activities</a>
-        </div>
+        <div class="places-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=600" alt="Kigali City">
+                <div class="card-body">
+                    <h3>Things to Do</h3>
+                    <p>Discover amazing activities and attractions in Kigali.</p>
+                    <a href="activities.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">View Activities</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Restaurant">
-            <h3>Places to Eat</h3>
-            <p>Explore the best restaurants in Kigali.</p>
-            <a href="restaurants.html">View Restaurants</a>
-        </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Restaurant">
+                <div class="card-body">
+                    <h3>Places to Eat</h3>
+                    <p>Explore the best restaurants in Kigali.</p>
+                    <a href="restaurants.html" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">View Restaurants</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=400" alt="Culture">
-            <h3>Cultural Experiences</h3>
-            <p>Learn about Rwanda's rich culture and history.</p>
-            <a href="culture.html">Explore Culture</a>
-        </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600" alt="Culture">
+                <div class="card-body">
+                    <h3>Cultural Experiences</h3>
+                    <p>Learn about Rwanda's rich culture and history.</p>
+                    <a href="culture.html" style="background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);">Explore Culture</a>
+                </div>
+            </div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400" alt="Nightlife">
-            <h3>Nightlife</h3>
-            <p>Experience Kigali's vibrant nightlife.</p>
-            <a href="nightlife.html">Discover Nightlife</a>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600" alt="Nightlife">
+                <div class="card-body">
+                    <h3>Nightlife</h3>
+                    <p>Experience Kigali's vibrant nightlife.</p>
+                    <a href="nightlife.html" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">Discover Nightlife</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -75,8 +93,11 @@
     </section>
 
     <footer>
-        <p>Created for IGIRE Training Assignment 2026</p>
-        <p>Contact: info@discoverkigali.com</p>
+        <div class="footer-inner">
+            <p>🌍 Discover Kigali &mdash; Your guide to Rwanda's capital</p>
+            <p>Contact: <a href="mailto:info@discoverkigali.com">info@discoverkigali.com</a></p>
+            <p class="footer-copy">Created for IGIRE Training Assignment 2026</p>
+        </div>
     </footer>
 
 </body>

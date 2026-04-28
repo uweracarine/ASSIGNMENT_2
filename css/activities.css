@@ -1,73 +1,29 @@
-/* CSS for Activities Page - Discover Kigali */
+/* ============================================================
+   ACTIVITIES.CSS — Discover Kigali
+   ============================================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('shared.css');
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-}
-
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
+/* ---------- Page Hero — Kigali outdoor/hiking background ---------- */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(10, 60, 30, 0.72), rgba(5, 40, 20, 0.85)),
+        url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600') center/cover;
+    background-attachment: fixed;
 }
 
-.page-header h2 {
-    font-size: 42px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
+/* ---------- Activities List ---------- */
 .content {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     background-color: white;
 }
 
 .content h3 {
-    font-size: 28px;
-    color: #667eea;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #2e7d32;
+    margin-bottom: 32px;
     text-align: center;
+    font-weight: 800;
 }
 
 .content ol {
@@ -80,237 +36,146 @@ nav a:hover {
 
 .content li {
     counter-increment: item;
-    margin-bottom: 25px;
-    padding: 25px;
-    background-color: #f8f9fa;
-    border-left: 5px solid #667eea;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 22px 22px 22px 30px;
+    background-color: #f1f8f1;
+    border-left: 5px solid #2e7d32;
+    border-radius: 12px;
     position: relative;
-    transition: all 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .content li::before {
     content: counter(item);
     position: absolute;
-    top: -15px;
-    left: -15px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    top: 50%;
+    left: -16px;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 8px rgba(46,125,50,0.4);
 }
 
 .content li:hover {
-    transform: translateX(10px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .content h4 {
-    color: #667eea;
-    font-size: 22px;
-    margin-bottom: 10px;
+    color: #2e7d32;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
 }
 
 .content p {
     color: #555;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
+/* ---------- Table Section ---------- */
 .table-section {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: #f4f6fb;
 }
 
 .table-section h3 {
-    font-size: 28px;
-    color: #667eea;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #2e7d32;
+    margin-bottom: 28px;
     text-align: center;
+    font-weight: 800;
 }
 
-table {
+.table-wrapper {
     max-width: 1000px;
     margin: 0 auto;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 table th {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 15px;
-    text-align: left;
-    font-weight: 600;
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
 }
 
-table td {
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
+table tr:hover td {
+    background-color: #e8f5e9;
 }
 
-table tr:hover {
-    background-color: #f0f4ff;
-}
-
-table tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
+/* ---------- Video Section ---------- */
 .video-section {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     text-align: center;
     background-color: white;
 }
 
 .video-section h3 {
-    font-size: 28px;
-    color: #667eea;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #2e7d32;
+    margin-bottom: 28px;
+    font-weight: 800;
 }
 
-.video-section video {
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
+/* ---------- Gallery ---------- */
 .gallery {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #f8f9fa;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: #f4f6fb;
 }
 
 .gallery h3 {
-    font-size: 28px;
-    color: #667eea;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #2e7d32;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 800;
 }
 
-.gallery img {
-    width: 320px;
-    height: 220px;
-    margin: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
+/* ---------- Form Section ---------- */
 .form-section {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     background-color: white;
 }
 
 .form-section h3 {
-    font-size: 28px;
-    color: #667eea;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #2e7d32;
+    margin-bottom: 28px;
     text-align: center;
+    font-weight: 800;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+.form-wrapper input[type="submit"] {
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+    box-shadow: 0 4px 16px rgba(46,125,50,0.4);
 }
 
-form label {
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
+.form-wrapper input:focus,
+.form-wrapper select:focus,
+.form-wrapper textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46,125,50,0.15);
 }
 
-form input[type="text"],
-form input[type="email"],
-form select,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form select:focus,
-form textarea:focus {
-    outline: none;
-    border-color: #667eea;
-}
-
-form input[type="submit"] {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    width: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
-
-form input[type="submit"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-}
-
-footer {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #e67e22;
-}
-
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .page-header h2 {
-        font-size: 32px;
+    .page-header {
+        background-attachment: scroll;
     }
-    
-    table {
-        font-size: 14px;
+
+    .content li {
+        padding-left: 20px;
     }
-    
-    table th, table td {
-        padding: 10px;
-    }
-    
-    .gallery img {
-        width: 100%;
-        max-width: 320px;
+
+    .content li::before {
+        left: -12px;
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
     }
 }

@@ -1,165 +1,104 @@
-/* CSS for Culture Page - Discover Kigali */
+/* ============================================================
+   CULTURE.CSS — Discover Kigali
+   ============================================================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url('shared.css');
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-}
-
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 12px;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
+/* ---------- Page Hero — Rwandan traditional dance/art background ---------- */
 .page-header {
-    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    background:
+        linear-gradient(rgba(80, 20, 100, 0.72), rgba(50, 10, 70, 0.85)),
+        url('https://images.unsplash.com/photo-1590845947698-dc1d36a15d7d?w=1600') center/cover;
+    background-attachment: fixed;
 }
 
-.page-header h2 {
-    font-size: 42px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
+/* ---------- Intro ---------- */
 .intro {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     background-color: white;
+    text-align: center;
 }
 
 .intro h3 {
-    font-size: 28px;
-    color: #8e44ad;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
     margin-bottom: 20px;
-    text-align: center;
+    font-weight: 800;
 }
 
 .intro p {
     max-width: 900px;
     margin: 0 auto;
-    font-size: 18px;
+    font-size: clamp(1rem, 2.2vw, 1.15rem);
     color: #555;
     line-height: 1.8;
-    text-align: center;
 }
 
+/* ---------- Museums / Cards ---------- */
 .museums {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 60px 20px;
-    background-color: #f8f9fa;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: #f9f4ff;
 }
 
 .museums h3 {
-    width: 100%;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
+    margin-bottom: 32px;
     text-align: center;
-    font-size: 28px;
-    color: #8e44ad;
-    margin-bottom: 20px;
+    font-weight: 800;
 }
 
-.card {
-    background-color: white;
-    border-radius: 15px;
-    width: 320px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card:hover img {
-    transform: scale(1.1);
+.museums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .card h4 {
-    color: #8e44ad;
-    margin: 20px 15px 10px;
-    font-size: 22px;
+    color: #6a1b9a;
+    margin: 18px 18px 8px;
+    font-size: 1.15rem;
 }
 
 .card p {
-    padding: 0 15px;
+    padding: 0 18px;
     color: #666;
-    margin-bottom: 10px;
+    font-size: 0.93rem;
+    margin-bottom: 8px;
 }
 
 .card a {
+    background: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
+    margin: 0 18px 18px;
     display: inline-block;
-    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+    padding: 9px 20px;
+    border-radius: 50px;
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 25px;
-    margin: 0 15px 20px;
-    transition: all 0.3s ease;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
 }
 
 .card a:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.4);
+    filter: brightness(1.1);
 }
 
+/* ---------- Traditions ---------- */
 .traditions {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     background-color: white;
 }
 
 .traditions h3 {
-    font-size: 28px;
-    color: #8e44ad;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
+    margin-bottom: 32px;
     text-align: center;
+    font-weight: 800;
 }
 
 .traditions ul {
@@ -170,213 +109,121 @@ nav a:hover {
 }
 
 .traditions li {
-    margin-bottom: 25px;
-    padding: 25px;
-    background-color: #f8f9fa;
-    border-left: 5px solid #8e44ad;
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    margin-bottom: 18px;
+    padding: 22px 22px 22px 28px;
+    background-color: #f9f4ff;
+    border-left: 5px solid #6a1b9a;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .traditions li:hover {
-    transform: translateX(10px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .traditions h4 {
-    color: #8e44ad;
-    font-size: 22px;
-    margin-bottom: 10px;
+    color: #6a1b9a;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
 }
 
 .traditions p {
     color: #555;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
+/* ---------- Video Section ---------- */
 .video-section {
-    padding: 60px 20px;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
     text-align: center;
-    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+    background: linear-gradient(135deg, #4a0072 0%, #6a1b9a 60%, #9c27b0 100%);
     color: white;
 }
 
 .video-section h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin-bottom: 28px;
+    font-weight: 800;
 }
 
-.video-section iframe {
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
-
+/* ---------- Gallery ---------- */
 .gallery {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: white;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: #f9f4ff;
 }
 
 .gallery h3 {
-    font-size: 28px;
-    color: #8e44ad;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 800;
 }
 
-.gallery img {
-    width: 300px;
-    height: 200px;
-    margin: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
+/* ---------- Links ---------- */
 .links {
-    padding: 60px 20px;
-    background-color: #f8f9fa;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: white;
 }
 
 .links h3 {
-    font-size: 28px;
-    color: #8e44ad;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
+    margin-bottom: 28px;
     text-align: center;
+    font-weight: 800;
 }
 
-.links ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
+.links-list a {
+    color: #6a1b9a;
 }
 
-.links li {
-    background-color: white;
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.links li:hover {
-    transform: translateX(10px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-.links a {
-    color: #8e44ad;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
+/* ---------- Form Section ---------- */
 .form-section {
-    padding: 60px 20px;
-    background-color: white;
+    padding: clamp(50px, 10vw, 90px) clamp(16px, 5vw, 40px);
+    background-color: #f9f4ff;
 }
 
 .form-section h3 {
-    font-size: 28px;
-    color: #8e44ad;
-    margin-bottom: 30px;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    color: #6a1b9a;
+    margin-bottom: 28px;
     text-align: center;
+    font-weight: 800;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+.form-wrapper input[type="submit"] {
+    background: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
+    box-shadow: 0 4px 16px rgba(106,27,154,0.4);
 }
 
-form label {
-    font-weight: 600;
-    color: #333;
-    display: block;
-    margin-bottom: 8px;
-    font-size: 16px;
+.form-wrapper input:focus,
+.form-wrapper select:focus,
+.form-wrapper textarea:focus {
+    border-color: #6a1b9a;
+    box-shadow: 0 0 0 3px rgba(106,27,154,0.15);
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
+/* ---------- Table ---------- */
+table th {
+    background: linear-gradient(135deg, #6a1b9a 0%, #9c27b0 100%);
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
-    outline: none;
-    border-color: #8e44ad;
+table tr:hover td {
+    background-color: #f3e5f5;
 }
 
-form input[type="checkbox"] {
-    margin: 8px;
-}
-
-form input[type="submit"] {
-    background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 600;
-    width: 100%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4);
-}
-
-form input[type="submit"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(142, 68, 173, 0.6);
-}
-
-footer {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer a {
-    color: #f39c12;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #e67e22;
-}
-
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .page-header h2 {
-        font-size: 32px;
+    .page-header {
+        background-attachment: scroll;
     }
-    
-    .gallery img {
-        width: 100%;
-        max-width: 300px;
+
+    .museums-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
     }
 }
